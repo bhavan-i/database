@@ -21,7 +21,7 @@ What is Inside a class?
 				     statements
                             (group of statments form a method)
 
-* A Java program has one class or multiple classes
+* A Java program has one class or multiple classes.........
 *********After every statement, we have semicolon;
 *******classes has two types          1. Class header(-----1------,-----2-----,------3------)
 				      2. Class body
