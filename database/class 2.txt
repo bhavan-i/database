@@ -1,0 +1,41 @@
+Two ways of creating a java project---------1.integrated development environment(ide)
+                                                example:eclipse
+                                            2. note pad,.........we write in note pad and 
+						command prompt to    complie and run
+for compiling javac filename.java
+to run java filename
+
+*compiling in ide is done automatically by eclipse
+*for command prompt it is similar to complie and running as in python
+CLASS:
+The predefined templet like gods creation of a thing or animal
+OBJECT:
+all those present in a class is a object
+What is Inside a class?
+1. Methods-----------any operation that can be done by a class(like car can move,sound from class etc)
+2. Variables----------static information given by a class(like car colour, make,model number)
+					Class
+					  |
+					Methods(variables,while,main)
+					  |
+				     statements
+                            (group of statments form a method)
+
+* A Java program has one class or multiple classes
+*********After every statement, we have semicolon;
+*******classes has two types          1. Class header(-----1------,-----2-----,------3------)
+				      2. Class body
+1 in class header tell to whom it is visible like public or private(access specifier)
+2 in class header  tell key word and 
+3 gives the class name(prgrm nam)
+******Any thing written in between {
+					} is called class body
+WHAT IS THERE IN CLASS BODY??
+we have methods------1'method header  (public static void main (string[] args)
+		      2. method body
+PUBLIC:
+STATIC:to load the class with out creating object
+VOID :does not return anything
+to return a particular data type put int/string/float
+MAIN:start of a program
+The data obtained from method is being stored in ARGS

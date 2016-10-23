@@ -1,0 +1,38 @@
+oddPingList = []
+evnPingList = []
+macAddr = []
+for ping in range(1,30):
+         ipAddress = "10.0.0." + str(ping)
+         res = subprocess.call(['ping', '-c', '1',  ipAddress])
+         if (res==0):
+            if ((ping%2)!=0 and ping!=15 and ping!=25):
+               oddPingList.append(ipAddress)
+
+i = 0
+while i<len(oddPingList):
+      child = pexpect.spawn('ssh root@'+ oddPingList[i])
+      child.expect('password')
+      child.sendline('prabhu')
+      child.expect(r'.*:~#')
+      print(child.before)
+     # child.interact()
+      child.sendline("ifconfig wlan1")
+      child.expect(r'.*:~#')
+      mac2 = child.after
+      print mac2
+      for word in mac2.splitlines():
+                if "HWaddr" in word:
+                      hwaddr = re.search( r'.*HWaddr\s(.*)', word )
+                      print hwaddr.group(1)
+                      macAddr.append(hwaddr.group(1))
+      child.close()
+      i = i+1
+
+print(macAddr)
+print(oddPingList)
+
+y = dict(zip(oddPingList, macAddr))
+print(y)
+
+
+-- INSERT --                                                                                                                                                                  22,1          34%
